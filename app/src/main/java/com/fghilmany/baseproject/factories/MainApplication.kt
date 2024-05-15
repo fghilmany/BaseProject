@@ -1,9 +1,7 @@
 package com.fghilmany.baseproject.factories
 
 import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
 
-class MainApplication: Application() {
-    val mainComponent: MainComponent by lazy {
-        DaggerMainComponent.factory().create()
-    }
-}
+@HiltAndroidApp
+class MainApplication: Application()

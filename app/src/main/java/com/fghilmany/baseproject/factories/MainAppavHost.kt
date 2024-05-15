@@ -14,8 +14,7 @@ import com.fghilmany.baseproject.feature.movielist.ui.navigation.moviesGraphRout
 fun MainAppNavHost(
     modifier: Modifier = Modifier,
     navHostController: NavHostController = rememberNavController(),
-    startDestination: String = moviesGraphRoute,
-    mainComponent: MainComponent
+    startDestination: String = moviesGraphRoute
 ) {
     NavHost(
         navController = navHostController,
@@ -23,11 +22,9 @@ fun MainAppNavHost(
         startDestination = startDestination
     ) {
         moviesGraph(
-            mainComponent = mainComponent,
             onMovieClick = navHostController::navigateToMovieDetail,
         ) {
             detailMovieScreen(
-                mainComponent = mainComponent,
                 popBackStack = navHostController::popBackStack,
                 navHostController = navHostController
             )

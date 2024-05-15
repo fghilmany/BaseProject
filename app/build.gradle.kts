@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
     kotlin("kapt")
+    alias(libs.plugins.dagger.hilt)
 }
 
 android {
@@ -81,6 +82,11 @@ dependencies {
     implementation(libs.okhttp)
     implementation(libs.logging.interceptor)
 
-    implementation(libs.dagger.android)
-    kapt(libs.dagger.compiler)
+    implementation(libs.dagger.hilt.android)
+    kapt(libs.dagger.hilt.compiler)
+    implementation(libs.dagger.hilt.navigation.compose)
+}
+
+kapt {
+    correctErrorTypes = true
 }

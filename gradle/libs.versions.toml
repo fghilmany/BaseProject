@@ -20,7 +20,8 @@ loggingInterceptor = "4.11.0"
 coil = "2.4.0"
 
 # Dependency Injection
-dagger = "2.46.1"
+dagger-hilt = "2.49"
+hilt = "1.2.0"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -54,11 +55,13 @@ okhttp = { module = "com.squareup.okhttp3:okhttp" }
 logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "loggingInterceptor" }
 
 # Dependency Injection
-dagger-android = { module = "com.google.dagger:dagger", version.ref = "dagger" }
-dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "dagger" }
+dagger-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "dagger-hilt" }
+dagger-hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "dagger-hilt" }
+dagger-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hilt" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "dagger-hilt" }
 

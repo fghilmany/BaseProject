@@ -1,26 +1,26 @@
 package com.fghilmany.baseproject.factories
 
-import com.fghilmany.baseproject.core.network.rest.RetrofitFactory
 import com.fghilmany.baseproject.feature.moviedetail.api.DetailMovieHttpClient
 import com.fghilmany.baseproject.feature.moviedetail.api.LoadDetailMovieUseCase
 import com.fghilmany.baseproject.feature.moviedetail.apiinfra.DetailMovieRetrofitClient
 import com.fghilmany.baseproject.feature.moviedetail.apiinfra.DetailMovieService
 import com.fghilmany.baseproject.feature.moviedetail.domain.LoadDetailMovie
-import com.fghilmany.baseproject.feature.moviedetail.presentation.DetailMovieViewModel
 import com.fghilmany.baseproject.feature.movielist.api.LoadMoviesUseCase
 import com.fghilmany.baseproject.feature.movielist.api.MoviesHttpClient
 import com.fghilmany.baseproject.feature.movielist.apiinfra.MovieService
 import com.fghilmany.baseproject.feature.movielist.apiinfra.MoviesRetrofitClient
 import com.fghilmany.baseproject.feature.movielist.domain.LoadMovies
-import com.fghilmany.baseproject.feature.movielist.presentation.MoviesViewModel
 import dagger.Binds
-import dagger.Component
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.android.components.ViewModelComponent
+import dagger.hilt.android.scopes.ViewModelScoped
+import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
-import javax.inject.Singleton
 
 @Module
+@InstallIn(SingletonComponent::class)
 class ListMovieServiceFactory {
     @Provides
     fun createListMovieService(retrofit: Retrofit): MovieService {
@@ -33,6 +33,7 @@ class ListMovieServiceFactory {
     }
 }
 @Module
+@InstallIn(SingletonComponent::class)
 abstract class MovieHttpClientFactory {
     @Binds
     abstract fun createMovieHttpClient(
@@ -46,32 +47,17 @@ abstract class MovieHttpClientFactory {
 }
 
 @Module
+@InstallIn(ViewModelComponent::class)
 abstract class RemoteMovieLoaderFactory {
     @Binds
+    @ViewModelScoped
     abstract fun createRemoteMovieLoader(
         remoteMovieLoader: LoadMoviesUseCase
     ): LoadMovies
 
     @Binds
+    @ViewModelScoped
     abstract fun createRemoteDetailMovieLoader(
         remoteDetailMovieLoader: LoadDetailMovieUseCase
     ): LoadDetailMovie
-}
-@Component(
-    modules = [
-        RemoteMovieLoaderFactory::class,
-        MovieHttpClientFactory::class,
-        ListMovieServiceFactory::class,
-        RetrofitFactory::class
-    ]
-)
-@Singleton
-interface MainComponent {
-    @Component.Factory
-    interface Factory {
-        fun create(): MainComponent
-    }
-
-    fun listMovieViewModel(): MoviesViewModel
-    fun detailMovieViewModel(): DetailMovieViewModel
 }

@@ -1,12 +1,11 @@
 package com.fghilmany.baseproject.feature.moviedetail.ui.navigation
 
-import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.composable
-import com.fghilmany.baseproject.factories.MainComponent
 import com.fghilmany.baseproject.feature.moviedetail.presentation.DetailMovieViewModel
 import com.fghilmany.baseproject.feature.moviedetail.ui.DetailMovieRoute
 
@@ -19,16 +18,13 @@ fun NavController.navigateToMovieDetail(movieId: Int, navOptions: NavOptions? = 
 }
 
 fun NavGraphBuilder.detailMovieScreen(
-    mainComponent: MainComponent,
     popBackStack: () -> Unit,
     navHostController: NavHostController
 ) {
     composable(
         route = detailMovieRoute,
     ) {
-        val viewModel: DetailMovieViewModel = viewModel {
-            mainComponent.detailMovieViewModel()
-        }
+        val viewModel: DetailMovieViewModel = hiltViewModel()
         val movieId = navHostController.previousBackStackEntry?.savedStateHandle?.get<Int>(MOVIE_ID)
 
         viewModel.setMovieId(movieId ?: 12)

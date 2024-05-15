@@ -7,7 +7,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.pullrefresh.pullRefresh
 import androidx.compose.material.pullrefresh.rememberPullRefreshState
 import androidx.compose.material3.CenterAlignedTopAppBar
@@ -72,7 +72,7 @@ fun DetailMovieScreen(
                 IconButton(onClick = {
                     popBackStack()
                 }) {
-                    Icon(imageVector = Icons.Filled.ArrowBack, contentDescription = "back from detail", tint = Color.White)
+                    Icon(imageVector = Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "back from detail", tint = Color.White)
                 }
             }
         )

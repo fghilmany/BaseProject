@@ -9,6 +9,7 @@ import com.fghilmany.baseproject.common.exception.DataEmpty
 import com.fghilmany.baseproject.common.exception.InvalidData
 import com.fghilmany.baseproject.feature.moviedetail.domain.DetailMovie
 import com.fghilmany.baseproject.feature.moviedetail.domain.LoadDetailMovie
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.map
@@ -17,6 +18,7 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+@HiltViewModel
 class DetailMovieViewModel @Inject constructor(
     private val useCase: LoadDetailMovie
 ): ViewModel() {
