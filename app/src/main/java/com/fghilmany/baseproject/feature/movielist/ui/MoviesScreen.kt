@@ -19,11 +19,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import androidx.lifecycle.viewmodel.compose.viewModel
 import com.fghilmany.baseproject.common.ui.component.LoadingContent
 import com.fghilmany.baseproject.common.ui.component.PullRefresh
-import com.fghilmany.baseproject.factories.MainComponent
-import com.fghilmany.baseproject.feature.movielist.domain.Movie
 import com.fghilmany.baseproject.feature.movielist.presentation.MoviesUiState
 import com.fghilmany.baseproject.feature.movielist.presentation.MoviesViewModel
 import com.fghilmany.baseproject.feature.movielist.ui.component.ListMovie

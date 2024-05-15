@@ -5,13 +5,12 @@ import com.fghilmany.baseproject.feature.moviedetail.api.DetailMovieHttpClient
 import com.fghilmany.baseproject.feature.moviedetail.api.LoadDetailMovieUseCase
 import com.fghilmany.baseproject.feature.moviedetail.apiinfra.DetailMovieRetrofitClient
 import com.fghilmany.baseproject.feature.moviedetail.apiinfra.DetailMovieService
-import com.fghilmany.baseproject.feature.moviedetail.domain.DetailMovie
 import com.fghilmany.baseproject.feature.moviedetail.domain.LoadDetailMovie
 import com.fghilmany.baseproject.feature.moviedetail.presentation.DetailMovieViewModel
 import com.fghilmany.baseproject.feature.movielist.api.LoadMoviesUseCase
 import com.fghilmany.baseproject.feature.movielist.api.MoviesHttpClient
-import com.fghilmany.baseproject.feature.movielist.apiinfra.MoviesRetrofitClient
 import com.fghilmany.baseproject.feature.movielist.apiinfra.MovieService
+import com.fghilmany.baseproject.feature.movielist.apiinfra.MoviesRetrofitClient
 import com.fghilmany.baseproject.feature.movielist.domain.LoadMovies
 import com.fghilmany.baseproject.feature.movielist.presentation.MoviesViewModel
 import dagger.Binds

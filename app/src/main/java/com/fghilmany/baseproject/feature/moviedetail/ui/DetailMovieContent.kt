@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -18,7 +17,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -29,7 +27,6 @@ import coil.compose.AsyncImage
 import com.fghilmany.baseproject.common.ui.url.ImageUrl.Companion.TMDB_BACKDROP_IMAGE
 import com.fghilmany.baseproject.feature.moviedetail.domain.DetailMovie
 import com.fghilmany.baseproject.feature.moviedetail.domain.Genre
-import com.fghilmany.baseproject.ui.theme.BaseProjectTheme
 
 @Composable
 fun DetailMovieContent(
@@ -116,6 +113,6 @@ fun DetailMovieContentPreview() {
         "Anabelle",
         "2020 - 12 - 12",
         listOf(Genre(0, "Horror"), Genre(1, "Comedy")),
-        "Test oevrview"
+        "Test overview"
     ))
 }
