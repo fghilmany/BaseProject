@@ -6,6 +6,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.composable
+import com.fghilmany.baseproject.factories.ViewModelFactory
 import com.fghilmany.baseproject.feature.moviedetail.presentation.DetailMovieViewModel
 import com.fghilmany.baseproject.feature.moviedetail.ui.DetailMovieRoute
 
@@ -24,10 +25,13 @@ fun NavGraphBuilder.detailMovieScreen(
     composable(
         route = detailMovieRoute,
     ) {
-        val viewModel: DetailMovieViewModel = hiltViewModel()
         val movieId = navHostController.previousBackStackEntry?.savedStateHandle?.get<Int>(MOVIE_ID)
+        val viewModel = hiltViewModel<DetailMovieViewModel, ViewModelFactory>(
+            creationCallback = {
+                it.createDetailMovieViewModel(movieId ?: 0)
+            }
+        )
 
-        viewModel.setMovieId(movieId ?: 12)
         DetailMovieRoute(
             viewModel = viewModel,
             popBackStack = popBackStack

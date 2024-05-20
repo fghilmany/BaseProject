@@ -5,6 +5,7 @@ import com.fghilmany.baseproject.feature.moviedetail.api.LoadDetailMovieUseCase
 import com.fghilmany.baseproject.feature.moviedetail.apiinfra.DetailMovieRetrofitClient
 import com.fghilmany.baseproject.feature.moviedetail.apiinfra.DetailMovieService
 import com.fghilmany.baseproject.feature.moviedetail.domain.LoadDetailMovie
+import com.fghilmany.baseproject.feature.moviedetail.presentation.DetailMovieViewModel
 import com.fghilmany.baseproject.feature.movielist.api.LoadMoviesUseCase
 import com.fghilmany.baseproject.feature.movielist.api.MoviesHttpClient
 import com.fghilmany.baseproject.feature.movielist.apiinfra.MovieService
@@ -13,6 +14,7 @@ import com.fghilmany.baseproject.feature.movielist.domain.LoadMovies
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
+import dagger.assisted.AssistedFactory
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ViewModelComponent
 import dagger.hilt.android.scopes.ViewModelScoped
@@ -60,4 +62,9 @@ abstract class RemoteMovieLoaderFactory {
     abstract fun createRemoteDetailMovieLoader(
         remoteDetailMovieLoader: LoadDetailMovieUseCase
     ): LoadDetailMovie
+}
+
+@AssistedFactory
+interface ViewModelFactory {
+    fun createDetailMovieViewModel(movieId: Int): DetailMovieViewModel
 }

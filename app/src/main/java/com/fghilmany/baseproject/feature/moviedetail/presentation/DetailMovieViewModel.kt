@@ -7,8 +7,11 @@ import com.fghilmany.baseproject.common.ResultData
 import com.fghilmany.baseproject.common.exception.Connectivity
 import com.fghilmany.baseproject.common.exception.DataEmpty
 import com.fghilmany.baseproject.common.exception.InvalidData
+import com.fghilmany.baseproject.factories.ViewModelFactory
 import com.fghilmany.baseproject.feature.moviedetail.domain.DetailMovie
 import com.fghilmany.baseproject.feature.moviedetail.domain.LoadDetailMovie
+import dagger.assisted.Assisted
+import dagger.assisted.AssistedInject
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
@@ -16,11 +19,11 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
-@HiltViewModel
-class DetailMovieViewModel @Inject constructor(
-    private val useCase: LoadDetailMovie
+@HiltViewModel(assistedFactory = ViewModelFactory::class)
+class DetailMovieViewModel @AssistedInject constructor(
+    private val useCase: LoadDetailMovie,
+    @Assisted val movieId: Int
 ): ViewModel() {
 
     private val viewModelState = MutableStateFlow(
@@ -44,27 +47,25 @@ class DetailMovieViewModel @Inject constructor(
 
     fun loadDetailMovie() {
         viewModelScope.launch {
-            viewModelState.collect{state ->
-                if (state.movieId != null){
-                    useCase.loadDetailMovie(state.movieId).collect { result ->
-                        Log.d("loadDetailMovie", "$result")
-                        viewModelState.update {
-                            when (result) {
-                                is ResultData.Success -> it.copy(
-                                    detailMovie = result.data,
-                                    isLoading = false
-                                )
+            viewModelState.collect{
+                useCase.loadDetailMovie(movieId).collect { result ->
+                    Log.d("loadDetailMovie", "$result")
+                    viewModelState.update {
+                        when (result) {
+                            is ResultData.Success -> it.copy(
+                                detailMovie = result.data,
+                                isLoading = false
+                            )
 
-                                is ResultData.Failure -> it.copy(
-                                    failed = when (result.throwable) {
-                                        is Connectivity -> "Connectivity"
-                                        is InvalidData -> "Invalid Data"
-                                        is DataEmpty -> "Data Empty"
-                                        else -> "Something Went Wrong"
-                                    },
-                                    isLoading = false
-                                )
-                            }
+                            is ResultData.Failure -> it.copy(
+                                failed = when (result.throwable) {
+                                    is Connectivity -> "Connectivity"
+                                    is InvalidData -> "Invalid Data"
+                                    is DataEmpty -> "Data Empty"
+                                    else -> "Something Went Wrong"
+                                },
+                                isLoading = false
+                            )
                         }
                     }
                 }
@@ -72,13 +73,13 @@ class DetailMovieViewModel @Inject constructor(
         }
     }
 
-    fun setMovieId(movieId: Int){
+    /*fun setMovieId(movieId: Int){
         viewModelScope.launch {
             viewModelState.update { it.copy(
                 movieId = movieId
             ) }
         }
-    }
+    }*/
 
 }
 
