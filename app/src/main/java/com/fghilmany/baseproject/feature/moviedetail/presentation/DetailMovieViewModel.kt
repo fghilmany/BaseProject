@@ -73,13 +73,6 @@ class DetailMovieViewModel @AssistedInject constructor(
         }
     }
 
-    /*fun setMovieId(movieId: Int){
-        viewModelScope.launch {
-            viewModelState.update { it.copy(
-                movieId = movieId
-            ) }
-        }
-    }*/
 
 }
 

@@ -11,6 +11,9 @@ compose-bom = "2024.05.00"
 androidGradlePlugin= "8.0.2"
 navigation= "2.7.7"
 
+# Sqlite
+room = "2.6.1"
+
 # Http
 retrofit = "2.9.0"
 moshi = "1.15.0"
@@ -58,6 +61,11 @@ logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", ver
 dagger-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "dagger-hilt" }
 dagger-hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "dagger-hilt" }
 dagger-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hilt" }
+
+# Sqlite
+room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

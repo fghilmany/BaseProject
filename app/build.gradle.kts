@@ -76,17 +76,24 @@ dependencies {
 
     implementation(libs.coil)
 
+    // Http
     implementation(libs.retrofit)
     implementation(libs.moshi.kotlin)
     implementation(libs.converter.moshi)
     implementation(libs.okhttp)
     implementation(libs.logging.interceptor)
 
+    // Injection
     implementation(libs.dagger.hilt.android)
     kapt(libs.dagger.hilt.compiler)
     implementation(libs.dagger.hilt.navigation.compose)
-}
 
+    // Sqlite
+    implementation(libs.room.ktx)
+    annotationProcessor(libs.room.compiler)
+    kapt(libs.room.compiler)
+    implementation(libs.room.ktx)
+}
 kapt {
     correctErrorTypes = true
 }

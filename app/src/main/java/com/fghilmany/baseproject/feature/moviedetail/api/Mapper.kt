@@ -14,7 +14,7 @@ fun RemoteDetailMovie.toDomain() = with(this){
     )
 }
 
-fun RemoteGenres.toDomain() = with(this){
+fun RemoteGenre.toDomain() = with(this){
     Genre(
         id,
         genre

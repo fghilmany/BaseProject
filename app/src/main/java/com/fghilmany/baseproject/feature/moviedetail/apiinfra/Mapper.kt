@@ -1,7 +1,7 @@
 package com.fghilmany.baseproject.feature.moviedetail.apiinfra
 
 import com.fghilmany.baseproject.feature.moviedetail.api.RemoteDetailMovie
-import com.fghilmany.baseproject.feature.moviedetail.api.RemoteGenres
+import com.fghilmany.baseproject.feature.moviedetail.api.RemoteGenre
 
 fun DetailMovieResponse.toAppLogic() = with(this){
     RemoteDetailMovie(
@@ -15,7 +15,7 @@ fun DetailMovieResponse.toAppLogic() = with(this){
 }
 
 fun GenresItem.toAppLogic() = with(this){
-    RemoteGenres(
+    RemoteGenre(
         id,
         name
     )

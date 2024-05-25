@@ -6,8 +6,10 @@ import com.fghilmany.baseproject.common.exception.ConnectivityException
 import com.fghilmany.baseproject.common.exception.InvalidDataException
 import com.fghilmany.baseproject.feature.moviedetail.api.DetailMovieHttpClient
 import com.fghilmany.baseproject.feature.moviedetail.api.RemoteDetailMovie
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.flowOn
 import retrofit2.HttpException
 import java.io.IOException
 import javax.inject.Inject
@@ -20,7 +22,6 @@ class DetailMovieRetrofitClient @Inject constructor(
             val listMovie = detailMovieService.getDetailMovie(movieId).toAppLogic()
             emit(ResultData.Success(listMovie))
         } catch (throwable: Throwable) {
-            Log.e("debug", throwable.message.toString())
             when(throwable) {
                 is IOException -> {
                     emit(ResultData.Failure(ConnectivityException()))
@@ -35,6 +36,6 @@ class DetailMovieRetrofitClient @Inject constructor(
                 }
             }
         }
-    }
+    }.flowOn(Dispatchers.IO)
 
 }
