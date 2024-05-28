@@ -9,7 +9,6 @@ import com.fghilmany.baseproject.feature.moviedetail.cache.DetailMovieLocalClien
 import com.fghilmany.baseproject.feature.moviedetail.cache.InsertDetailMovieUseCase
 import com.fghilmany.baseproject.feature.moviedetail.cacheinfra.DetailMovieDao
 import com.fghilmany.baseproject.feature.moviedetail.cacheinfra.DetailMovieRoomClient
-import com.fghilmany.baseproject.feature.moviedetail.decorator.DetailMovieDecorator
 import com.fghilmany.baseproject.feature.moviedetail.domain.InsertDetailMovie
 import com.fghilmany.baseproject.feature.moviedetail.domain.LoadDetailMovie
 import com.fghilmany.baseproject.feature.moviedetail.presentation.DetailMovieViewModel
@@ -18,7 +17,6 @@ import com.fghilmany.baseproject.feature.movielist.api.MoviesHttpClient
 import com.fghilmany.baseproject.feature.movielist.apiinfra.MovieService
 import com.fghilmany.baseproject.feature.movielist.apiinfra.MoviesRetrofitClient
 import com.fghilmany.baseproject.feature.movielist.domain.LoadMovies
-import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.assisted.AssistedFactory
