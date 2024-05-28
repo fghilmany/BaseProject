@@ -7,7 +7,7 @@ import com.fghilmany.baseproject.common.ResultData
 import com.fghilmany.baseproject.common.exception.Connectivity
 import com.fghilmany.baseproject.common.exception.DataEmpty
 import com.fghilmany.baseproject.common.exception.InvalidData
-import com.fghilmany.baseproject.factories.ViewModelFactory
+import com.fghilmany.baseproject.factories.di.ViewModelFactory
 import com.fghilmany.baseproject.feature.moviedetail.domain.DetailMovie
 import com.fghilmany.baseproject.feature.moviedetail.domain.LoadDetailMovie
 import dagger.assisted.Assisted

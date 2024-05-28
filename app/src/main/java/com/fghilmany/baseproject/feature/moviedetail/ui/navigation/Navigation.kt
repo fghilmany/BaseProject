@@ -6,7 +6,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.composable
-import com.fghilmany.baseproject.factories.ViewModelFactory
+import com.fghilmany.baseproject.factories.di.ViewModelFactory
 import com.fghilmany.baseproject.feature.moviedetail.presentation.DetailMovieViewModel
 import com.fghilmany.baseproject.feature.moviedetail.ui.DetailMovieRoute
 

@@ -1,6 +1,5 @@
 package com.fghilmany.baseproject.feature.moviedetail.apiinfra
 
-import android.util.Log
 import com.fghilmany.baseproject.common.ResultData
 import com.fghilmany.baseproject.common.exception.ConnectivityException
 import com.fghilmany.baseproject.common.exception.InvalidDataException
