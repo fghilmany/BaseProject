@@ -2,7 +2,6 @@ package com.fghilmany.baseproject.feature.moviedetail.cache
 
 import com.fghilmany.baseproject.common.ResultData
 import kotlinx.coroutines.flow.Flow
-import kotlin.reflect.jvm.internal.impl.descriptors.Visibilities.Local
 
 interface DetailMovieLocalClient {
     suspend fun saveDetailMovie(detailMovie: LocalDetailMovie)

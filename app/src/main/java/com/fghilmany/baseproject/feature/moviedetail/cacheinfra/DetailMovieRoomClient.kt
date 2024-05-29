@@ -1,14 +1,11 @@
 package com.fghilmany.baseproject.feature.moviedetail.cacheinfra
 
 import com.fghilmany.baseproject.common.ResultData
-import com.fghilmany.baseproject.common.exception.ConnectivityException
 import com.fghilmany.baseproject.common.exception.InvalidDataException
 import com.fghilmany.baseproject.feature.moviedetail.cache.DetailMovieLocalClient
 import com.fghilmany.baseproject.feature.moviedetail.cache.LocalDetailMovie
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import retrofit2.HttpException
-import java.io.IOException
 import javax.inject.Inject
 
 class DetailMovieRoomClient @Inject constructor(

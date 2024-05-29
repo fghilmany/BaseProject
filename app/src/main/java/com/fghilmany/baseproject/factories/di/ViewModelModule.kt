@@ -4,7 +4,6 @@ import com.fghilmany.baseproject.feature.moviedetail.domain.LoadDetailMovie
 import com.fghilmany.baseproject.feature.moviedetail.presentation.DetailMovieViewModel
 import dagger.Binds
 import dagger.Module
-import dagger.Provides
 import dagger.assisted.AssistedFactory
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ViewModelComponent
