@@ -34,7 +34,7 @@ jobs:
           command: sudo chmod +x ./gradlew
       - run:
           name: Download Dependencies
-          command: ./gradler androidDependencies
+          command: ./gradlew androidDependencies
       - save_cache:
           paths:
             - ~/.android/build-cache
