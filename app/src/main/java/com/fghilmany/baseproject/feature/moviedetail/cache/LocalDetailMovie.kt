@@ -5,9 +5,9 @@ data class LocalDetailMovie(
     val backdropPath: String,
     val title: String,
     val releaseDate: String,
-    val genres: List<LocalGenre>,
     val overview: String,
-    var isFavorite: Boolean = false
+    var isFavorite: Boolean = false,
+    val genres: List<LocalGenre>,
 )
 
 data class LocalGenre(

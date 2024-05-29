@@ -1,8 +1,10 @@
 package com.fghilmany.baseproject.feature.moviedetail.cacheinfra
 
 import androidx.room.ColumnInfo
+import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import androidx.room.Relation
 
 @Entity(tableName = "movie_detail")
 data class DetailMovieEntity(
@@ -17,8 +19,18 @@ data class DetailMovieEntity(
     @ColumnInfo(name = "overview")
     val overview: String,
     @ColumnInfo(name = "is_favorite")
-    var isFavorite: Boolean = false
+    var isFavorite: Boolean = false,
 )
+
+data class DetailMovieWithGenres(
+    @Embedded val detailMovieEntity: DetailMovieEntity,
+    @Relation(
+        parentColumn = "id",
+        entityColumn = "movie_id"
+    )
+    val genres: List<LocalGenreEntity>
+)
+
 @Entity(tableName = "movie_detail_genre")
 data class LocalGenreEntity(
     @PrimaryKey(autoGenerate = true)

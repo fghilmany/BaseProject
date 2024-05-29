@@ -4,8 +4,15 @@ import javax.inject.Qualifier
 
 @Qualifier
 @Retention(AnnotationRetention.BINARY)
-annotation class BaseLoadDetailMovie
+annotation class RemoteUseCaseAnnotation
+@Qualifier
+@Retention(AnnotationRetention.BINARY)
+annotation class LocalUseCaseAnnotation
 
 @Qualifier
 @Retention(AnnotationRetention.BINARY)
-annotation class BaseInsertDetailMovie
+annotation class CompositeAnnotation
+
+@Qualifier
+@Retention(AnnotationRetention.BINARY)
+annotation class DecoratorAnnotation

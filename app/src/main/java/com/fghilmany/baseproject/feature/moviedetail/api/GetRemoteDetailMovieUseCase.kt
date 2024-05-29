@@ -13,7 +13,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
-class LoadDetailMovieUseCase @Inject constructor(
+class GetRemoteDetailMovieUseCase @Inject constructor(
     private val detailMovieHttpClient: DetailMovieHttpClient
 ): LoadDetailMovie {
     override suspend fun loadDetailMovie(movieId: Int): Flow<ResultData<DetailMovie>> = flow {

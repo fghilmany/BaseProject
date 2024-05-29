@@ -7,15 +7,20 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
 object DecoratorModule{
+
+    @DecoratorAnnotation
     @Provides
+    @Singleton
     fun provideDetailMovieDecorator(
-        @BaseLoadDetailMovie loadDetailMovie: LoadDetailMovie,
-        @BaseInsertDetailMovie insertDetailMovie: InsertDetailMovie
-    ): DetailMovieDecorator {
+        @RemoteUseCaseAnnotation loadDetailMovie: LoadDetailMovie,
+        @LocalUseCaseAnnotation insertDetailMovie: InsertDetailMovie
+    ): LoadDetailMovie {
         return DetailMovieDecorator(loadDetailMovie, insertDetailMovie)
     }
+
 }

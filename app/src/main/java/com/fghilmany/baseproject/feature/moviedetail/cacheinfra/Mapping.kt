@@ -21,3 +21,19 @@ fun LocalDetailMovie.toDao() = with(this){
         isFavorite
     )
 }
+
+fun DetailMovieWithGenres.toAppLogic() = with(this.detailMovieEntity){
+    LocalDetailMovie(
+        id,
+        backdropPath,
+        title,
+        releaseDate,
+        overview,
+        isFavorite,
+        this@toAppLogic.genres.map { genre -> with(genre){
+            LocalGenre(
+                id, movieId, name
+            )
+        } }
+    )
+}
