@@ -54,6 +54,23 @@ android {
 
 dependencies {
 
+    implementation(project(":feature:moviedetail:domain"))
+    implementation(project(":feature:moviedetail:api"))
+    implementation(project(":feature:moviedetail:apiinfra"))
+    implementation(project(":feature:moviedetail:cache"))
+    implementation(project(":feature:moviedetail:cacheinfra"))
+    implementation(project(":feature:moviedetail:composite"))
+    implementation(project(":feature:moviedetail:decorator"))
+    implementation(project(":feature:moviedetail:presentation"))
+    implementation(project(":feature:moviedetail:ui"))
+    implementation(project(":feature:movielist:domain"))
+    implementation(project(":feature:movielist:api"))
+    implementation(project(":feature:movielist:apiinfra"))
+    implementation(project(":feature:movielist:presentation"))
+    implementation(project(":feature:movielist:ui"))
+    implementation(project(":core:sqlite"))
+    implementation(project(":core:rest"))
+
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)
     implementation(libs.activity.compose)

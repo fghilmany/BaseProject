@@ -1,8 +1,8 @@
 package com.fghilmany.baseproject.factories.di
 
-import com.fghilmany.baseproject.feature.moviedetail.decorator.DetailMovieDecorator
-import com.fghilmany.baseproject.feature.moviedetail.domain.InsertDetailMovie
-import com.fghilmany.baseproject.feature.moviedetail.domain.LoadDetailMovie
+import com.fghilmany.moviedetail.decorator.DetailMovieDecorator
+import com.fghilmany.moviedetail.domain.InsertDetailMovie
+import com.fghilmany.moviedetail.domain.LoadDetailMovie
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -20,7 +20,10 @@ object DecoratorModule{
         @RemoteUseCaseAnnotation loadDetailMovie: LoadDetailMovie,
         @LocalUseCaseAnnotation insertDetailMovie: InsertDetailMovie
     ): LoadDetailMovie {
-        return DetailMovieDecorator(loadDetailMovie, insertDetailMovie)
+        return DetailMovieDecorator(
+            loadDetailMovie,
+            insertDetailMovie
+        )
     }
 
 }

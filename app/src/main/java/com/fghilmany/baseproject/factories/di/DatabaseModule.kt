@@ -1,9 +1,9 @@
 package com.fghilmany.baseproject.factories.di
 
-import com.fghilmany.baseproject.core.db.sqlite.AppDatabase
-import com.fghilmany.baseproject.feature.moviedetail.cache.DetailMovieLocalClient
-import com.fghilmany.baseproject.feature.moviedetail.cacheinfra.DetailMovieDao
-import com.fghilmany.baseproject.feature.moviedetail.cacheinfra.DetailMovieRoomClient
+import com.fghilmany.core.sqlite.AppDatabase
+import com.fghilmany.moviedetail.cache.DetailMovieLocalClient
+import com.fghilmany.moviedetail.cacheinfra.DetailMovieDao
+import com.fghilmany.moviedetail.cacheinfra.DetailMovieRoomClient
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

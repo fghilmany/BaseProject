@@ -1,11 +1,11 @@
 package com.fghilmany.baseproject.factories.di
 
-import com.fghilmany.baseproject.feature.moviedetail.api.DetailMovieHttpClient
-import com.fghilmany.baseproject.feature.moviedetail.apiinfra.DetailMovieRetrofitClient
-import com.fghilmany.baseproject.feature.moviedetail.apiinfra.DetailMovieService
-import com.fghilmany.baseproject.feature.movielist.api.MoviesHttpClient
-import com.fghilmany.baseproject.feature.movielist.apiinfra.MovieService
-import com.fghilmany.baseproject.feature.movielist.apiinfra.MoviesRetrofitClient
+import com.fghilmany.moviedetail.api.DetailMovieHttpClient
+import com.fghilmany.moviedetail.apiinfra.DetailMovieRetrofitClient
+import com.fghilmany.moviedetail.apiinfra.DetailMovieService
+import com.fghilmany.movielist.api.MoviesHttpClient
+import com.fghilmany.movielist.apiinfra.MovieService
+import com.fghilmany.movielist.apiinfra.MoviesRetrofitClient
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

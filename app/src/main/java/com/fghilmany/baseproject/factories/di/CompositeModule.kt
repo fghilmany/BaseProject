@@ -1,7 +1,7 @@
 package com.fghilmany.baseproject.factories.di
 
-import com.fghilmany.baseproject.feature.moviedetail.composite.DetailMovieComposite
-import com.fghilmany.baseproject.feature.moviedetail.domain.LoadDetailMovie
+import com.fghilmany.composite.DetailMovieComposite
+import com.fghilmany.moviedetail.domain.LoadDetailMovie
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -17,7 +17,7 @@ object CompositeModule {
     fun providesCompositeModule(
         @LocalUseCaseAnnotation primary: LoadDetailMovie,
         @DecoratorAnnotation fallback: LoadDetailMovie
-    ): LoadDetailMovie{
+    ): LoadDetailMovie {
         return DetailMovieComposite(primary, fallback)
     }
 }

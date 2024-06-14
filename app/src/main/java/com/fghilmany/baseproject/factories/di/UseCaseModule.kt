@@ -1,15 +1,15 @@
 package com.fghilmany.baseproject.factories.di
 
-import com.fghilmany.baseproject.feature.moviedetail.api.DetailMovieHttpClient
-import com.fghilmany.baseproject.feature.moviedetail.api.GetRemoteDetailMovieUseCase
-import com.fghilmany.baseproject.feature.moviedetail.cache.DetailMovieLocalClient
-import com.fghilmany.baseproject.feature.moviedetail.cache.GetLocalMovieDetailsUseCase
-import com.fghilmany.baseproject.feature.moviedetail.cache.InsertDetailMovieUseCase
-import com.fghilmany.baseproject.feature.moviedetail.domain.InsertDetailMovie
-import com.fghilmany.baseproject.feature.moviedetail.domain.LoadDetailMovie
-import com.fghilmany.baseproject.feature.movielist.api.LoadMoviesUseCase
-import com.fghilmany.baseproject.feature.movielist.api.MoviesHttpClient
-import com.fghilmany.baseproject.feature.movielist.domain.LoadMovies
+import com.fghilmany.moviedetail.api.DetailMovieHttpClient
+import com.fghilmany.moviedetail.api.GetRemoteDetailMovieUseCase
+import com.fghilmany.moviedetail.cache.DetailMovieLocalClient
+import com.fghilmany.moviedetail.cache.GetLocalMovieDetailsUseCase
+import com.fghilmany.moviedetail.cache.InsertDetailMovieUseCase
+import com.fghilmany.moviedetail.domain.InsertDetailMovie
+import com.fghilmany.moviedetail.domain.LoadDetailMovie
+import com.fghilmany.movielist.api.LoadMoviesUseCase
+import com.fghilmany.movielist.api.MoviesHttpClient
+import com.fghilmany.movielist.domain.LoadMovies
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -47,7 +47,7 @@ object LocalUseCaseModule {
     @Provides
     fun provideLoadDetailMovieUseCase(
         client: DetailMovieLocalClient
-    ): LoadDetailMovie{
+    ): LoadDetailMovie {
         return GetLocalMovieDetailsUseCase(client)
     }
 }

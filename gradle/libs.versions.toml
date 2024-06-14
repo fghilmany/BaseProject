@@ -25,6 +25,9 @@ coil = "2.4.0"
 # Dependency Injection
 dagger-hilt = "2.49"
 hilt = "1.2.0"
+appcompat = "1.6.1"
+material = "1.12.0"
+mediationTestSuite = "3.0.0"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -66,6 +69,9 @@ dagger-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compo
 room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
 room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
 room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+google-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+mediation-test-suite = { group = "com.google.android.ads", name = "mediation-test-suite", version.ref = "mediationTestSuite" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
