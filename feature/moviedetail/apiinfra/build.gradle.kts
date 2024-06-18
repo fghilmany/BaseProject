@@ -38,16 +38,9 @@ dependencies {
     implementation(project(":feature:moviedetail:api"))
 
     implementation(libs.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.google.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.test.ext.junit)
-    androidTestImplementation(libs.espresso.core)
 
     implementation(libs.dagger.hilt.android)
 
     // Http
-    implementation(libs.retrofit)
-    implementation(libs.moshi.kotlin)
-    implementation(libs.converter.moshi)
+    implementation(libs.bundles.retrofit)
 }

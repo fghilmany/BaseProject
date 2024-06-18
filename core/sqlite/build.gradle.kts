@@ -36,22 +36,12 @@ android {
 dependencies {
 
     implementation(project(":feature:moviedetail:cacheinfra"))
-
-    implementation(libs.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.google.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.test.ext.junit)
-    androidTestImplementation(libs.espresso.core)
-
     // Injection
-    implementation(libs.dagger.hilt.android)
+    implementation(libs.bundles.hilt)
     kapt(libs.dagger.hilt.compiler)
-    implementation(libs.dagger.hilt.navigation.compose)
 
     // Sqlite
-    implementation(libs.room.ktx)
+    implementation(libs.bundles.room)
     annotationProcessor(libs.room.compiler)
     kapt(libs.room.compiler)
-    implementation(libs.room.ktx)
 }

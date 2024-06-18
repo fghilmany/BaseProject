@@ -80,35 +80,19 @@ dependencies {
     implementation(libs.ui.tooling.preview)
     implementation(libs.material)
     implementation(libs.material3)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.test.ext.junit)
-    androidTestImplementation(libs.espresso.core)
+
     androidTestImplementation(platform(libs.compose.bom))
-    androidTestImplementation(libs.ui.test.junit4)
     debugImplementation(libs.ui.tooling)
     debugImplementation(libs.ui.test.manifest)
-    implementation(libs.lifecycle.viewmodel.compose)
-    implementation(libs.lifecycle.runtime.compose)
-    implementation(libs.navigation.compose)
-
-    implementation(libs.coil)
 
     // Http
     implementation(libs.retrofit)
-    implementation(libs.moshi.kotlin)
-    implementation(libs.converter.moshi)
-    implementation(libs.okhttp)
-    implementation(libs.logging.interceptor)
 
     // Injection
-    implementation(libs.dagger.hilt.android)
+    implementation(libs.bundles.hilt)
     kapt(libs.dagger.hilt.compiler)
-    implementation(libs.dagger.hilt.navigation.compose)
 
     // Sqlite
-    implementation(libs.room.ktx)
-    annotationProcessor(libs.room.compiler)
-    kapt(libs.room.compiler)
     implementation(libs.room.ktx)
 }
 kapt {

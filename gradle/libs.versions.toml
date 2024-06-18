@@ -69,6 +69,7 @@ dagger-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compo
 room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
 room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
 room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 google-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 mediation-test-suite = { group = "com.google.android.ads", name = "mediation-test-suite", version.ref = "mediationTestSuite" }
@@ -78,4 +79,9 @@ androidApplication = { id = "com.android.application", version.ref = "agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "dagger-hilt" }
+
+[bundles]
+retrofit = ["retrofit", "moshi-kotlin", "converter-moshi", "okhttp", "logging-interceptor"]
+hilt = ["dagger-hilt-android", "dagger-hilt-navigation-compose"]
+room = ["room-runtime", "room-ktx"]
 

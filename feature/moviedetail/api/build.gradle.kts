@@ -38,11 +38,6 @@ dependencies {
     implementation(project(":feature:moviedetail:domain"))
 
     implementation(libs.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.google.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.test.ext.junit)
-    androidTestImplementation(libs.espresso.core)
 
     implementation(libs.dagger.hilt.android)
 }

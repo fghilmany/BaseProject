@@ -24,9 +24,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
-import com.fghilmany.common.ui.url.ImageUrl.Companion.TMDB_BACKDROP_IMAGE
+import com.fghilmany.common.url.ImageUrl.Companion.TMDB_BACKDROP_IMAGE
 import com.fghilmany.moviedetail.domain.DetailMovie
-import com.fghilmany.moviedetail.domain.Genre
 
 @Composable
 fun DetailMovieContent(

@@ -43,15 +43,10 @@ dependencies {
     implementation(project(":common"))
     implementation(project(":feature:moviedetail:domain"))
     implementation(project(":feature:moviedetail:presentation"))
-//    implementation(project(":app"))
 
     implementation(libs.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.google.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.test.ext.junit)
-    androidTestImplementation(libs.espresso.core)
-
 
     implementation(libs.lifecycle.viewmodel.compose)
     implementation(libs.lifecycle.runtime.compose)

@@ -48,9 +48,6 @@ dependencies {
     implementation(libs.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.google.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.test.ext.junit)
-    androidTestImplementation(libs.espresso.core)
 
     implementation(libs.lifecycle.viewmodel.compose)
     implementation(libs.lifecycle.runtime.compose)
@@ -63,9 +60,5 @@ dependencies {
     implementation(libs.activity.compose)
     implementation(platform(libs.compose.bom))
 
-    implementation(libs.navigation.compose)
     implementation(libs.dagger.hilt.navigation.compose)
-
-    implementation(libs.dagger.hilt.android)
-    kapt(libs.dagger.hilt.compiler)
 }

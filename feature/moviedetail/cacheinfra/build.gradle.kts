@@ -48,8 +48,7 @@ dependencies {
     implementation(libs.dagger.hilt.android)
 
     // Sqlite
-    implementation(libs.room.ktx)
+    implementation(libs.bundles.room)
     annotationProcessor(libs.room.compiler)
     kapt(libs.room.compiler)
-    implementation(libs.room.ktx)
 }

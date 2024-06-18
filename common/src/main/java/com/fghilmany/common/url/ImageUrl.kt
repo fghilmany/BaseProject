@@ -1,4 +1,4 @@
-package com.fghilmany.common.ui.url
+package com.fghilmany.common.url
 
 class ImageUrl {
     companion object{

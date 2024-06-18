@@ -35,22 +35,10 @@ android {
 
 dependencies {
 
-    implementation(libs.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.google.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.test.ext.junit)
-    androidTestImplementation(libs.espresso.core)
-
     // Http
-    implementation(libs.retrofit)
-    implementation(libs.moshi.kotlin)
-    implementation(libs.converter.moshi)
-    implementation(libs.okhttp)
-    implementation(libs.logging.interceptor)
+    implementation(libs.bundles.retrofit)
 
     // Injection
-    implementation(libs.dagger.hilt.android)
+    implementation(libs.bundles.hilt)
     kapt(libs.dagger.hilt.compiler)
-    implementation(libs.dagger.hilt.navigation.compose)
 }

@@ -28,7 +28,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
-import com.fghilmany.common.ui.url.ImageUrl.Companion.TMDB_POSTER_IMAGE
+import com.fghilmany.common.url.ImageUrl.Companion.TMDB_POSTER_IMAGE
 import com.fghilmany.movielist.domain.Movie
 
 @Composable
