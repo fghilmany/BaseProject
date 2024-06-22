@@ -71,7 +71,7 @@ dependencies {
     implementation(project(":feature:movielist:presentation"))
     implementation(project(":feature:movielist:ui"))
     implementation(project(":core:sqlite"))
-    implementation(project(":core:rest"))
+    implementation(project(":core:retrofit"))
 
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)
