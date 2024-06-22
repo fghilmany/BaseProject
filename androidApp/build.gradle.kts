@@ -70,7 +70,7 @@ dependencies {
     implementation(project(":feature:movielist:apiinfra"))
     implementation(project(":feature:movielist:presentation"))
     implementation(project(":feature:movielist:ui"))
-    implementation(project(":core:sqlite"))
+    implementation(project(":core:room"))
     implementation(project(":core:retrofit"))
 
     implementation(libs.core.ktx)
