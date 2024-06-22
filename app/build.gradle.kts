@@ -43,7 +43,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = "1.5.13"
     }
     packaging {
         resources {
@@ -53,6 +53,8 @@ android {
 }
 
 dependencies {
+
+    implementation (project(":shared"))
 
     implementation(project(":feature:moviedetail:domain"))
     implementation(project(":feature:moviedetail:api"))
