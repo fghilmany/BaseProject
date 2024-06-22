@@ -11,6 +11,7 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
     }
+
 }
 
 rootProject.name = "BaseProject"
@@ -32,3 +33,4 @@ include(":feature:movielist:presentation")
 include(":feature:movielist:ui")
 include(":core:rest")
 include(":core:sqlite")
+include(":shared")

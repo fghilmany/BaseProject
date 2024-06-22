@@ -8,7 +8,6 @@ espresso-core = "3.5.1"
 lifecycle-runtime-ktx = "2.8.2"
 activity-compose = "1.9.0"
 compose-bom = "2024.06.00"
-androidGradlePlugin= "8.0.2"
 navigation= "2.7.7"
 
 # Sqlite
@@ -77,8 +76,9 @@ mediation-test-suite = { group = "com.google.android.ads", name = "mediation-tes
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "agp" }
 dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "dagger-hilt" }
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 
 [bundles]
 retrofit = ["retrofit", "moshi-kotlin", "converter-moshi", "okhttp", "logging-interceptor"]
