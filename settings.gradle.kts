@@ -15,7 +15,7 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "BaseProject"
-include(":app")
+include(":androidApp")
 include(":feature:moviedetail:domain")
 include(":feature:moviedetail:api")
 include(":feature:moviedetail:apiinfra")
