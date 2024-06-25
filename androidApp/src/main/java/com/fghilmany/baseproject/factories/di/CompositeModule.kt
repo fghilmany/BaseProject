@@ -1,6 +1,6 @@
 package com.fghilmany.baseproject.factories.di
 
-import com.fghilmany.composite.DetailMovieComposite
+import com.fghilmany.baseproject.composite.DetailMovieComposite
 import com.fghilmany.moviedetail.domain.LoadDetailMovie
 import dagger.Module
 import dagger.Provides
