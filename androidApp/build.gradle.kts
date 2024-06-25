@@ -55,7 +55,6 @@ android {
 dependencies {
 
     implementation (project(":common"))
-    implementation (project(":shared"))
 
     implementation(project(":feature:moviedetail:domain"))
     implementation(project(":feature:moviedetail:api"))
