@@ -1,4 +1,4 @@
-package com.fghilmany.composite
+package com.fghilmany.baseproject.composite
 
 import com.fghilmany.common.ResultData
 import com.fghilmany.moviedetail.domain.DetailMovie

@@ -62,7 +62,6 @@ dependencies {
     implementation(project(":feature:moviedetail:apiinfra"))
     implementation(project(":feature:moviedetail:cache"))
     implementation(project(":feature:moviedetail:cacheinfra"))
-    implementation(project(":feature:moviedetail:composite"))
     implementation(project(":feature:moviedetail:presentation"))
     implementation(project(":feature:moviedetail:ui"))
     implementation(project(":feature:movielist:domain"))
