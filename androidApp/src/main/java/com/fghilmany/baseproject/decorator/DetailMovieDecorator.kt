@@ -1,4 +1,4 @@
-package com.fghilmany.moviedetail.decorator
+package com.fghilmany.baseproject.decorator
 
 
 import com.fghilmany.common.ResultData
