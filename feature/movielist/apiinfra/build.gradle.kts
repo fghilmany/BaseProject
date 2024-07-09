@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlinAndroid)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
@@ -43,4 +44,6 @@ dependencies {
 
     // Http
     implementation(libs.bundles.retrofit)
+    implementation(libs.bundles.ktor)
+    implementation(libs.ktor.client.okhttp)
 }

@@ -1,63 +1,66 @@
 package com.fghilmany.movielist.apiinfra
 
-import com.squareup.moshi.Json
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class MovieResponse(
 
-    @Json(name="page")
+    @SerialName("page")
 	val page: Int,
 
-    @Json(name="total_pages")
+    @SerialName("total_pages")
 	val totalPages: Int,
 
-    @Json(name="results")
+    @SerialName("results")
 	val results: List<ResultsItem>? = null,
 
-    @Json(name="total_results")
+    @SerialName("total_results")
 	val totalResults: Int
 )
 
+@Serializable
 data class ResultsItem(
 
-	@Json(name="overview")
+	@SerialName("overview")
 	val overview: String,
 
-	@Json(name="original_language")
+	@SerialName("original_language")
 	val originalLanguage: String,
 
-	@Json(name="original_title")
+	@SerialName("original_title")
 	val originalTitle: String,
 
-	@Json(name="video")
+	@SerialName("video")
 	val video: Boolean,
 
-	@Json(name="title")
+	@SerialName("title")
 	val title: String,
 
-	@Json(name="genre_ids")
+	@SerialName("genre_ids")
 	val genreIds: List<Int?>,
 
-	@Json(name="poster_path")
+	@SerialName("poster_path")
 	val posterPath: String,
 
-	@Json(name="backdrop_path")
+	@SerialName("backdrop_path")
 	val backdropPath: String? = null,
 
-	@Json(name="release_date")
+	@SerialName("release_date")
 	val releaseDate: String,
 
-	@Json(name="popularity")
-	val popularity: Any,
+	@SerialName("popularity")
+	val popularity: Double,
 
-	@Json(name="vote_average")
-	val voteAverage: Any,
+	@SerialName("vote_average")
+	val voteAverage: Double,
 
-	@Json(name="id")
+	@SerialName("id")
 	val id: Int,
 
-	@Json(name="adult")
+	@SerialName("adult")
 	val adult: Boolean,
 
-	@Json(name="vote_count")
+	@SerialName("vote_count")
 	val voteCount: Int
 )

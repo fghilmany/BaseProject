@@ -71,6 +71,7 @@ dependencies {
     implementation(project(":feature:movielist:ui"))
     implementation(project(":core:sqlite:room"))
     implementation(project(":core:rest:retrofit"))
+    implementation(project(":core:rest:ktor"))
 
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)
@@ -88,6 +89,7 @@ dependencies {
 
     // Http
     implementation(libs.retrofit)
+    implementation(libs.ktor.client.core)
 
     // Injection
     implementation(libs.bundles.hilt)

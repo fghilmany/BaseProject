@@ -25,7 +25,15 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            
+            implementation(libs.bundles.ktor)
+            implementation(libs.kermit)
+        }
+        androidMain.dependencies {
+            implementation(libs.ktor.client.okhttp)
+            implementation(libs.moshi.kotlin)
+        }
+        iosMain.dependencies {
+            implementation(libs.ktor.client.darwin)
         }
         commonTest.dependencies {
 

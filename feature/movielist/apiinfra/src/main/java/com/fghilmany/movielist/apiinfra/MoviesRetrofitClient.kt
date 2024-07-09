@@ -4,6 +4,9 @@ import com.fghilmany.common.*
 import com.fghilmany.common.exception.*
 import com.fghilmany.movielist.api.MoviesHttpClient
 import com.fghilmany.movielist.api.RemoteMovie
+import io.ktor.client.HttpClient
+import io.ktor.client.call.body
+import io.ktor.client.request.get
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException
@@ -11,11 +14,12 @@ import java.io.IOException
 import javax.inject.Inject
 
 class MoviesRetrofitClient @Inject constructor(
-    private val movieService: MovieService
+    private val movieClient: HttpClient
 ): MoviesHttpClient {
     override fun loadMovies(): Flow<ResultData<List<RemoteMovie>>> = flow{
+        val service = movieClient.get("discover/movie").body<MovieResponse>()
         try {
-            val listMovie = movieService.getListMovie().results?.map { it.toAppLogic() }
+            val listMovie = service.results?.map { it.toAppLogic() }
             if (listMovie != null){
                 emit(ResultData.Success(listMovie))
             }else{
